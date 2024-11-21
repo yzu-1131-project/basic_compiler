@@ -155,7 +155,3 @@ class TestLexer(unittest.TestCase):
         self.check_lex_error("!2", "Expected !=, got !2")
         self.check_lex_error("2.", 'Number must have at least one digit after "."')
         self.check_lex_error("2.2.2", 'Number must have only one "."')
-
-
-# if __name__ == "__main__":
-#     unittest.main()
