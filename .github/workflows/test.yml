@@ -1,0 +1,35 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - master    # 當推送到 master 分支時執行
+  pull_request:
+    branches:
+      - master    # 當 PR 合併到 master 分支時執行
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: 檢查出最新的程式碼
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: 設置 Python 環境
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'  # 選擇需要的 Python 版本
+
+      # Step 3: 安裝依賴項
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .   # 安裝 package
+          pip install pytest # 安裝測試工具
+
+      # Step 4: 運行測試
+      - name: Run tests
+        run: pytest tests/
