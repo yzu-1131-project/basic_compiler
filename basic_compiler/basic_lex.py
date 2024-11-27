@@ -1,4 +1,4 @@
-from basic_compiler.token import Token, TokenType
+from basic_compiler.basic_token import Token, TokenType
 
 
 class Lexer:
