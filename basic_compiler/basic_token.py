@@ -1,5 +1,6 @@
 import enum
 
+
 class TokenType(enum.Enum):
     # Special tokens
     EOF = -1

@@ -4,6 +4,7 @@ from basic_compiler.basic_parser import Parser
 import sys
 import logging
 
+
 def main():
     print("=====Basic Compiler=====")
     print("|    COPYRIGHT 2024    |")
@@ -21,7 +22,9 @@ def main():
         source = f.read()
 
     # Set up logging, format include the source file name and line number
-    logging.basicConfig(level=logging.DEBUG, format='{%(filename)s:%(lineno)d} %(message)s')
+    logging.basicConfig(
+        level=logging.DEBUG, format="{%(filename)s:%(lineno)d} %(message)s"
+    )
 
     lexer = Lexer(source)
     parser = Parser(lexer)
