@@ -18,7 +18,7 @@ class_stmt ->
 
 func_stmt ->
     "FUNCTION" ident "(" [ param_list ] ")" [ "AS" type ] nl
-    { normal_stmt }
+    { normal_stmt | declaration_stmt }
     "ENDFUNCTION" nl
 
 param_list ->
