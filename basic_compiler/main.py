@@ -1,7 +1,9 @@
 from basic_compiler.basic_lex import Lexer
+from basic_compiler.basic_parser import Parser
 
 import sys
 import logging
+
 
 def main():
     print("=====Basic Compiler=====")
@@ -20,11 +22,15 @@ def main():
         source = f.read()
 
     # Set up logging, format include the source file name and line number
-    logging.basicConfig(level=logging.DEBUG, format='{%(filename)s:%(lineno)d} %(message)s')
+    logging.basicConfig(
+        level=logging.DEBUG, format="{%(filename)s:%(lineno)d} %(message)s"
+    )
 
     lexer = Lexer(source)
+    parser = Parser(lexer)
 
-    print("Lexer completed.")
+    parser.program()
+    print("Parsing completed.")
 
 
 if __name__ == "__main__":
