@@ -1,7 +1,7 @@
 import unittest
 
-from basic_compiler.lex import Lexer
-from basic_compiler.token import TokenType
+from basic_compiler.basic_lex import Lexer
+from basic_compiler.basic_token import TokenType
 
 
 class TestLexer(unittest.TestCase):
@@ -157,5 +157,5 @@ class TestLexer(unittest.TestCase):
         self.check_lex_error("2.2.2", 'Number must have only one "."')
 
 
-# if __name__ == "__main__":
-#     unittest.main()
+if __name__ == "__main__":
+    unittest.main()
