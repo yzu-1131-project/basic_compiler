@@ -1,4 +1,5 @@
 from basic_compiler.basic_lex import Lexer
+from basic_compiler.basic_parser import Parser
 
 import sys
 import logging
@@ -23,8 +24,10 @@ def main():
     logging.basicConfig(level=logging.DEBUG, format='{%(filename)s:%(lineno)d} %(message)s')
 
     lexer = Lexer(source)
+    parser = Parser(lexer)
 
-    print("Lexer completed.")
+    parser.program()
+    print("Parsing completed.")
 
 
 if __name__ == "__main__":
