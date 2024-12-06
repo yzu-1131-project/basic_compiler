@@ -4,3 +4,8 @@ __pycache__
 .idea
 
 basic_compiler.egg-info
+build
+dist
+
+*.cpp
+*.spec

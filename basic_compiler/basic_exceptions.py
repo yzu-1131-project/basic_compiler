@@ -1,10 +1,14 @@
+class LexerError(Exception):
+    pass
+
+
 class ParserError(Exception):
-    def __init__(self, message):
-        self.message = message
-        super().__init__(self.message)
+    pass
 
 
 class TokenError(Exception):
-    def __init__(self, message):
-        self.message = message
-        super().__init__(self.message)
+    pass
+
+
+class SymbolTableError(Exception):
+    pass

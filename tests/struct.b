@@ -1,0 +1,7 @@
+STRUCT st1
+    i AS INT
+ENDSTRUCT
+
+FUNCTION main() AS INT
+    LET st AS st1()
+ENDFUNCTION
