@@ -1,0 +1,3 @@
+FUNCTION main() AS INT
+    func1()
+ENDFUNCTION
