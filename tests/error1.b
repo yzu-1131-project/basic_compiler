@@ -1,0 +1,4 @@
+FUNCTION main() AS INT
+    LET a AS INT = 1
+    LET a AS INT = 0
+ENDFUNCTION

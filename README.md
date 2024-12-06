@@ -12,8 +12,8 @@ stmt ->
 
 class_stmt ->
     "CLASS" ident nl
-    ( "PUBLIC" | "PRIVATE" ) nl
-    { func_stmt | declaration_stmt }
+    { ( "PUBLIC" | "PRIVATE" ) nl
+      func_stmt | declaration_stmt }
     "ENDCLASS" nl
 
 func_stmt ->
