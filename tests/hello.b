@@ -1,7 +1,8 @@
+# Here is a comment
+
 FUNCTION main() AS INT
     PRINT "HELLO WORLD!"
 
-    # We can use # to comment out a line
     PRINT RED "HELLO WORLD!"
     PRINT ORANGE "HELLO WORLD!"
     PRINT YELLOW "HELLO WORLD!"
